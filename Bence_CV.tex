@@ -1,0 +1,197 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{000000}
+\definecolor{PastelRed}{HTML}{333333}
+\definecolor{GoldenEarth}{HTML}{C3C3C3}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\begin{document}
+\name{Bence Imre Kiss}
+\tagline{Software Developer}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Bricks}
+% \photoR{2.8cm}{Bricks_GS}
+% \photoR{2.8cm}{Bilka}
+% \photoR{2.8cm}{Bilka_GS}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{kissbenceimre99@gmail.com}
+  \phone{+45 50 37 98 64}
+  % \mailaddress{Letvadvej 3A, 9200 Aalborg, Denmark}
+  \location{Aalborg, Denmark}
+  % \homepage{www.homepage.com}
+  % \twitter{@twitterhandle}
+  % \xtwitter{@x-handle}
+  \\
+  \linkedin{bence-imre-kiss}
+  \github{BeXeB}
+  % You can add your own arbitrary detail with
+  % \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  % Or you can declare your own field with
+  % \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Full-Stack Developer}{Monky Shine}{April 2023 -- Ongoing}{Aalborg, Remote}
+\begin{itemize}
+\item Develop and maintain a web application using Angular and .NET Core.
+\item[] \color{black}\texttt{C\# | .NET Core | Angular | TypeScript | MSSQL}
+\end{itemize}
+
+\divider
+
+\cvevent{Game Developer Intern}{EmptyBox}{January 2023 -- April 2023}{Aalborg}
+\begin{itemize}
+\item Helped migrate an exing project to Unity DOTS, improving performance and scalability.
+\item Developed core gameplay systems for an unreleased title.
+\item[] \color{black}\texttt{Unity | C\# | Unity DOTS}
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer Intern}{OleSoft}{August 2020 -- October 2020}{Debrecen, Remote}
+\begin{itemize}
+\item Contributed to developing an app that digitized trash container rentals, reducing paperwork.
+\item[] \color{black}\texttt{React | TypeScript | Node.js}
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{StarCraft II Intelligent Agent}{Masters Project}{}{}
+\begin{itemize}
+\item Developed an intelligent agent capable of playing StarCraft II. 
+\item The agent utilized Monte-Carlo Tree Search, Neural Networks, and scripted actions to make decisions.
+\item[] \color{black}\texttt{Python | C++}
+\end{itemize}
+
+\divider
+
+\cvevent{Graphite - A Custom Language for Graph Manipulation}{University Project}{}{}
+\begin{itemize}
+\item Designed and implemented a custom object-oriented programming language, focused on graph manipulation.
+\item Enabled graph visualization by adding DOT export functionality.
+\item[] \color{black}\texttt{C\# | DOT | Graphviz}
+\end{itemize}
+
+\divider
+
+\cvevent{Unity Framework for Programmable Entities}{Bachelors Project}{}{}
+\begin{itemize}
+\item Developed a Unity framework for programming-based games, enabling players to reprogram in-game entities.
+\item Designed and implemented a custom C-like scripting language for player-interactable in-game code.
+\item[] \color{black}\texttt{C\# | Unity}
+\end{itemize}
+
+\switchcolumn
+
+\cvsection{Skills}
+
+\textcolor{SlateGrey}{\textbf{Programming}}
+\smallskip
+\begin{itemize}
+    \item[] C\#, Python - Advanced
+    \item[] Java, TypeScript - Intermediate
+    \item[] C++ - Basic
+\end{itemize}
+
+\divider
+
+\textcolor{SlateGrey}{\textbf{Frameworks \& Tools}}
+\smallskip
+\begin{itemize}
+    \item[] .NET, Git, Unity
+\end{itemize}
+
+\cvsection{Languages}
+
+\cvskill{Hungarian}{5}
+\divider
+
+\cvskill{English}{4.5}
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{M.Sc.\ in Computer Science}{Aalborg University}{September 2023 -- June 2025}{}
+
+\divider
+
+\cvevent{B.Sc.\ in Software Development}{University Collage of Northern Denmark}{January 2022 -- June 2023}{}
+
+\divider
+
+\cvevent{AP\ in Computer Science}{University Collage of Northern Denmark}{September 2018 -- December 2020}{}
+
+\divider
+
+\cvevent{Highschool Degree}{
+Mechwart András Secondary Technical School of Engineering and Information Technology}{September 2014 -- June 2018}{}
+
+\medskip
+
+\cvsection{Interests}
+\begin{itemize}
+\item Playing and making games
+\item Running, Cycling
+\item Reading
+\end{itemize}
+
+\end{paracol}
+
+\end{document}
