@@ -167,7 +167,7 @@
   \IfNoValueTF{#4}{%
     \mbox{\textcolor{accent}%
     {\BeginAccSupp{method=escape,ActualText={\IfNoValueTF{#1}{\detokenize{#2}}{#1}:\space}}\normalfont #2\EndAccSupp{}}%
-    ~\utffriendlydetokenize{#3}\hspace{2em}}%
+    ~\utffriendlydetokenize{#3}}%
   }{% v1.7.4: fix accsupp ActualText bugs when withhyper enabled
     \iftoggle{withhyper}{%
       \mbox{\textcolor{accent}%
@@ -176,12 +176,12 @@
       \BeginAccSupp{method=escape,ActualText={#4}}%
       \href{#4}{\utffriendlydetokenize{#3}}%
       \EndAccSupp{}%
-      \hspace{2em}}%
+      }%
      }{%
        \ClassWarning{Please specify [withhyper] option to enable hyperlinks. Printing out full hyperlink prefix #1 for now.}%
       \mbox{\textcolor{accent}
       {\BeginAccSupp{method=escape,ActualText={\IfNoValueTF{#1}{\detokenize{#2}}{#1}:\space}}\normalfont #2\EndAccSupp{}}%
-      ~{\utffriendlydetokenize{#4}}\hspace{2em}}%
+      ~{\utffriendlydetokenize{#4}}}%
     }%
   }%
 }%
@@ -329,7 +329,7 @@
       ~#3}%
     }}%
   \ifstrequal{#4}{}{}{%
-    {\small\makebox[0.5\linewidth][l]%
+    {\small\makebox[0.5\linewidth][r]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
         ~#4}%
     }}\par
