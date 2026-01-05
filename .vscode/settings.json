@@ -1,0 +1,43 @@
+{ 
+   "latex-workshop.latex.recipes": [
+        {
+        "name": "CV (EN)",
+        "tools": ["latexmk-en"]
+        },
+        {
+        "name": "CV (HU)",
+        "tools": ["latexmk-hu"]
+        },
+        {
+        "name": "CV (ALL)",
+        "tools": ["latexmk-en", "latexmk-hu"]
+        }
+    ],
+
+    "latex-workshop.latex.tools": [
+        {
+        "name": "latexmk-en",
+        "command": "latexmk",
+        "args": [
+            "-pdf",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "-jobname=Bence_CV_DK",
+            "Bence_CV_DK.tex"
+        ]
+        },
+        {
+        "name": "latexmk-hu",
+        "command": "latexmk",
+        "args": [
+            "-pdf",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "-jobname=Bence_CV_HU",
+            "Bence_CV_HU.tex"
+        ]
+        }
+    ],
+
+    "latex-workshop.latex.recipe.default": "CV (ALL)"
+}

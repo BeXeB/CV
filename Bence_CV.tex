@@ -20,6 +20,10 @@
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
+% \def\Lang{en}
+% \def\Lang{hu}
+\input{content/\Lang/commands.tex}
+
 % Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
@@ -58,25 +62,20 @@
   % Not all of these are required!
   \begin{tabular}{lll}
     \email{kissbenceimre99@gmail.com} &
-    \phone{+45 50 37 98 64} &
-    % \phone{+36 30 555 8877} &
-    \location{Aalborg, Denmark} \\
-    % \location{Ebes, Hungary} \\
-    \linkedin{bence-imre-kiss} &
-    \github{BeXeB} &
+    \phone{\Phone} &
+    \location{\Location} \\
+    \linkedin{bence-imre-kiss}{LinkedIn} &
+    \github{BeXeB}{Github} &
   \end{tabular}
     
   
   % \mailaddress{Letvadvej 3A, 9200 Aalborg, Denmark}
-  
   % \homepage{www.homepage.com}
   % \twitter{@twitterhandle}
   % \xtwitter{@x-handle}
-  
   % You can add your own arbitrary detail with
   % \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-
   % Or you can declare your own field with
   % \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
   % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
@@ -93,118 +92,89 @@
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
-\cvsection{Experience}
+\cvsection{\TxtExperience}
 
-\cvevent{Full-Stack Developer}{Monky Shine}{April 2023 -- Ongoing}{Aalborg}
-\begin{itemize}
-\item[] \justifying Develop and maintain the company's booking application using Angular and .NET Core. I have implemented new features, improved existing functionality and contributed to the integration of Nets payment to streamline transactions and enhance user experience.
-\item[] \color{black}\texttt{C\# | .NET Core | Angular | TypeScript | MSSQL | SCSS}
-\end{itemize}
+\cvevent{\ExpATitle}{\ExpAEmployer}{\ExpADate}{\ExpALocation}
+\ExpAContent
 
 \noskipdivider
 
-\cvevent{Game Developer Intern}{EmptyBox}{January 2023 -- April 2023}{Aalborg}
-\begin{itemize}
-\item[] \justifying Worked on migrating an unreleased project to Unity DOTS, improving performance and scalability. Developed core systems for the project, including a 2D animation system for Unity DOTS, and a fast-travel system.
-\item[] \color{black}\texttt{Unity | C\# | Unity DOTS}
-\end{itemize}
+\cvevent{\ExpBTitle}{\ExpBEmployer}{\ExpBDate}{\ExpBLocation}
+\ExpBContent
 
 \noskipdivider
 
-\cvevent{Software Developer Intern}{OleSoft}{August 2020 -- October 2020}{Debrecen}
-\begin{itemize}
-\item[] \justifying Contributed to a web application that digitized the process of trash container rentals, significantly reducing manual paperwork and improving efficiency.
-\item[] \color{black}\texttt{React | TypeScript | Node.js}
-\end{itemize}
+\cvevent{\ExpCTitle}{\ExpCEmployer}{\ExpCDate}{\ExpCLocation}
+\ExpCContent
 
-\cvsection{Projects}
+\cvsection{\TxtProjects}
 
-\cvevent{StarCraft II Intelligent Agent}{Master's Project}{}{}
-\begin{itemize}
-\item[] \justifying Developed an intelligent agent capable of playing StarCraft II. The agent utilized Monte-Carlo Tree Search for Action selection and Neural Networks to analyze the state of the game.
-\item[] \color{black}\texttt{Python | C++}
-\end{itemize}
+\cvevent{\ProjAName}{\ProjAContext}{}{}
+\ProjAContent
 
 \noskipdivider
 
-\cvevent{Graphite - A Custom Language for Graph Manipulation}{University Project}{}{}
-\begin{itemize}
-\sloppy
-\item[] \justifying Designed and implemented Graphite, a custom object-oriented programming language focused on simplifying graph manipulation with specialized operations and enabling graph visualization through DOT integration.
-\item[] \color{black}\texttt{C\# | DOT | Graphviz}
-\end{itemize}
+\cvevent{\ProjBName}{\ProjBContext}{}{}
+\ProjBContent
 
 \noskipdivider
 
-\cvevent{Player Programmable Behaviours}{Bachelor's Project}{}{}
-\begin{itemize}
-\item[] \justifying Developed a system which allows developers to expose the code of objects, allowing players to interactively modify in-game behaviour through a custom C-like scripting language.
-\item[] \color{black}\texttt{C\# | Unity}
-\end{itemize}
+\cvevent{\ProjCName}{\ProjCContext}{}{}
+\ProjCContent
 
 \switchcolumn
 
-\cvsection{Who am I?}
+\cvsection{\TxtSummary}
 \vspace{-10pt}
-\begin{justify}
-\sloppy
-Newly graduated software developer passionate about learning new technologies and enhancing my skills through working on projects and solving problem. I am looking to join a team where I can learn, contribute, and take on interesting challenges. Outside of work, I use my programming skills to develop games and build tools for my hobbies.
-\end{justify}
+\SummaryContent
 \vspace{-5pt}
 
-\cvsection{Skills}
+\cvsection{\TxtSkills}
 
-\textcolor{SlateGrey}{\textbf{Programming}}
+\textcolor{SlateGrey}{\textbf{\SkillProgramming}}
 \\[2pt]
 \begin{tabular}{ll}
-    Advanced: &C\#, Python, TypeScript \\
-    Intermediate: &Java, T-SQL \\
-    Beginner: &C++, Go \\
+    \SkillAdvanced: &C\#, Python, TypeScript \\
+    \SkillIntermediate: &Java, T-SQL \\
+    \SkillBeginner: &C++, Go \\
 \end{tabular}
 \\[9pt]
 \noskipdivider
 
-\textcolor{SlateGrey}{\textbf{Frameworks \& Tools}}
+\textcolor{SlateGrey}{\textbf{\SkillFrameworksTools}}
 \\[2pt]
 \begin{itemize}
     \item[] .NET, Git, Unity
 \end{itemize}
 
-\cvsection{Languages}
+\cvsection{\TxtLanguages}
 
-\cvskill{Hungarian}{5}
+\cvskill{\LangHungarian}{5}
 
 \noskipdivider
 
-\cvskill{English}{4.5}
+\cvskill{\LangEnglish}{4.5}
+\smallskip
+
+\cvsection{\TxtEducation}
+
+\cvevent{\EduAName}{\EduAInstitution}{\EduADate}{}
+
+\noskipdivider
+
+\cvevent{\EduBName}{\EduBInstitution}{\EduBDate}{}
+\noskipdivider
+
+\cvevent{\EduCName}{\EduCInstitution}{\EduCDate}{}
+
+\noskipdivider
+
+\cvevent{\EduDName}{\EduDInstitution}{\EduDDate}{}
 
 \smallskip
 
-\cvsection{Education}
-
-\cvevent{M.Sc.\ in Computer Science}{Aalborg University}{September 2023 -- June 2025}{}
-
-\noskipdivider
-
-\cvevent{B.Sc.\ in Software Development}{University College of Northern Denmark}{January 2022 -- June 2023}{}
-
-\noskipdivider
-
-\cvevent{AP\ in Computer Science}{University College of Northern Denmark}{September 2018 -- December 2020}{}
-
-\noskipdivider
-
-\cvevent{High School Degree}{
-Mechwart András Secondary Technical School of Engineering and Information Technology}{September 2014 -- June 2018}{}
-
-\smallskip
-
-\cvsection{Interests}
-\begin{itemize}
-\item Playing and developing games
-\item Running and Cycling
-\item Reading
-\end{itemize}
+\cvsection{\TxtInterests}
+\InterestsContent
 
 \end{paracol}
 

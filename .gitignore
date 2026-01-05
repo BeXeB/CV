@@ -1,16 +1,16 @@
 
-Bence_CV.aux
+*.aux
 
-Bence_CV.fdb_latexmk
+*.fdb_latexmk
 
-Bence_CV.fls
+*.fls
 
-Bence_CV.log
+*.log
 
-Bence_CV.out
+*.out
 
-Bence_CV.synctex.gz
+*.synctex.gz
 
-Bence_CV.pdf
+*.pdf
 
 pdfa.xmpi
