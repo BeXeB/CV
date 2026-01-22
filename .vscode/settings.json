@@ -9,8 +9,12 @@
         "tools": ["latexmk-hu"]
         },
         {
+        "name": "CV (HU-EN)",
+        "tools": ["latexmk-hu-en"]
+        },
+        {
         "name": "CV (ALL)",
-        "tools": ["latexmk-en", "latexmk-hu"]
+        "tools": ["latexmk-en", "latexmk-hu", "latexmk-hu-en"]
         }
     ],
 
@@ -23,6 +27,7 @@
             "-interaction=nonstopmode",
             "-halt-on-error",
             "-jobname=Bence_CV_DK",
+            "-outdir=CVs",
             "Bence_CV_DK.tex"
         ]
         },
@@ -34,10 +39,24 @@
             "-interaction=nonstopmode",
             "-halt-on-error",
             "-jobname=Bence_CV_HU",
+            "-outdir=CVs",
             "Bence_CV_HU.tex"
+        ]
+        },
+        {
+        "name": "latexmk-hu-en",
+        "command": "latexmk",
+        "args": [
+            "-pdf",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "-jobname=Bence_CV_HU_EN",
+            "-outdir=CVs",
+            "Bence_CV_HU_EN.tex"
         ]
         }
     ],
 
+    "latex-workshop.latex.outDir": "./CVs",
     "latex-workshop.latex.recipe.default": "CV (ALL)"
 }
